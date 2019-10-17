@@ -1,0 +1,8 @@
+query FeaturedPlaylistQuery {
+  FeaturedPlaylist {
+    id
+    __typename
+    name
+    imageUrl
+  }
+}

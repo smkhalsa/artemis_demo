@@ -19,7 +19,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  artemis: ^2.0.5
+  artemis: ^2.0.7
   json_serializable: ^3.0.0
   equatable: ^0.6.1
   gql: ^0.11.1

@@ -1,9 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:artemis/artemis.dart';
+
+import './graphql_api.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   // This widget is the root of your application.
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    getContent();
+  }
+
+  getContent() async {
+    final client = ArtemisClient("https://api.kundalini.dev");
+    final featuredPlaylistQuery = FeaturedQuery();
+    final response = await client.execute(featuredPlaylistQuery);
+    print(response);
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

@@ -1,4 +1,4 @@
-query FeaturedPlaylistQuery {
+query Featured {
   FeaturedPlaylist {
     id
     __typename
